@@ -8,17 +8,23 @@ pipeline {
     }
 
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
-                echo 'Running tests...'
-                // Replace with your test command, e.g., Maven, Gradle, etc.
-                sh 'echo testing'
+                echo 'Building Docker image...'
+                script {
+                    // Build the Docker image
+                    def image = docker.build("test:latest")
+                }
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'echo hi'
+                echo 'Running Docker container...'
+                script {
+                    // Run the Docker container
+                    docker.image("test:latest").run('-p 8000:8000')
+                }
             }
         }
     }
