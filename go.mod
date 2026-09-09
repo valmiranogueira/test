@@ -8,8 +8,8 @@ require (
 	github.com/hashicorp/go-retryablehttp v0.7.2
 	github.com/prometheus/client_golang v1.14.0
 	github.com/spf13/cobra v1.6.1
-	golang.org/x/crypto v0.54.0
-	golang.org/x/text v0.41.0
+	golang.org/x/crypto v0.53.0
+	golang.org/x/text v0.39.0
 	google.golang.org/grpc v1.69.2
 	gopkg.in/yaml.v2 v2.4.0
 )
