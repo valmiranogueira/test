@@ -1,4 +1,4 @@
-module example.com/go-trivy-vuln-demo
+module my_company.com/test
 
 go 1.25.0
 

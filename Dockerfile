@@ -2,8 +2,8 @@ FROM golang:1.25-alpine AS builder
 
 WORKDIR /src
 
-COPY my_company/go.mod ./
-COPY my_company/go.sum ./
+COPY go.mod ./
+COPY go.sum ./
 COPY my_company/main.go ./
 
 RUN go mod download
