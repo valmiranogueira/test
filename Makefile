@@ -8,6 +8,9 @@ build:
 scan:
 	trivy image --scanners vuln $(IMAGE)
 
+test:
+	echo 'Running tests...'
+
 run:
 	docker run --rm $(IMAGE)
 
