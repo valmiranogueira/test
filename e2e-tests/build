@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+: "${IMAGE:?IMAGE must be set}"
+
+exec make build
