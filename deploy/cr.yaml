@@ -3,4 +3,4 @@ kind: TestCluster
 metadata:
   name: test
 spec:
-  image: valmiranogueira/test:1.2.0
+  image: valmiranogueira/test:1.2.0-2
