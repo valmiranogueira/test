@@ -19,10 +19,16 @@ Build the Docker image:
 make build
 ```
 
-This creates:
+By default this creates:
 
 ```text
-test:latest
+valmiranogueira/test:1.2.0
+```
+
+Override `IMAGE` to build another pipeline tag, for example:
+
+```bash
+make build IMAGE=valmiranogueira/test:1.2.0-1
 ```
 
 ## Run
@@ -94,5 +100,14 @@ This repository is intended for testing workflows such as:
 * Pull Request automation
 * Automated releases
 * Vulnerability remediation
+
+## Weekly security pipeline fixture
+
+The repository includes the minimal paths consumed by the weekly security build:
+
+* `pkg/version/version.txt` provides the base operator version.
+* `config/manager/` and `deploy/` contain image references rewritten by the pipeline.
+* `deploy/cr.yaml` provides the pillar image used to derive `PILLAR_VERSION`.
+* `e2e-tests/release_versions` tracks the image used by release tests.
 
 > **Warning:** This repository intentionally contains a vulnerable dependency. It should only be used for testing and development purposes.

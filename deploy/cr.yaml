@@ -1,0 +1,6 @@
+apiVersion: example.com/v1
+kind: TestCluster
+metadata:
+  name: test
+spec:
+  image: valmiranogueira/test:1.2.0

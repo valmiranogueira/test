@@ -1,4 +1,4 @@
-IMAGE ?= test:latest
+IMAGE ?= valmiranogueira/test:1.2.0
 
 .PHONY: build scan run clean
 

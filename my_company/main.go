@@ -26,5 +26,5 @@ func main() {
 	_ = grpc.NewServer()
 	_, _ = yaml.Marshal(map[string]string{"test": "security"})
 	_ = http.MethodGet
-	fmt.Println("intentionally vulnerable dependency test project")
+	fmt.Println("Hello from test")
 }
