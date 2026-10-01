@@ -1,0 +1,9 @@
+apiVersion: kuttl.dev/v1beta1
+kind: TestStep
+commands:
+  - script: |
+      logs=$(kubectl -n "$NAMESPACE" logs job/test)
+
+      echo "$logs"
+
+      echo "$logs" | grep -q "Hello from test"

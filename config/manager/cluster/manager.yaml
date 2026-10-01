@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-operator-cluster-wide
+spec:
+  template:
+    spec:
+      containers:
+        - name: test-operator
+          image: docker.io/valmiranogueira/test:1.2.0
